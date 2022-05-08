@@ -1,7 +1,6 @@
 variable "AWS_REGION" {
   default = "ap-southeast-1"
 }
-
 variable "rules" {
     type=list(object({
         from_port = number
@@ -10,7 +9,6 @@ variable "rules" {
         cidr_block = string
         description = string
     }))
-
     default = [{
         from_port = 22
         to_port = 22
@@ -33,7 +31,6 @@ variable "rules" {
         description = "allow web server connectivity"
      },
     { 
-
        from_port = 9092
         to_port = 9092
         protocol = "tcp"
